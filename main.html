@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Web project - Main</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        img {
+            border-radius: 40%;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to My Work Space</h1>
+     </header>
+
+    <nav>
+        <div class="nav-container">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#aboutme">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+   
+
+
+    <main>
+        <section id="home" class="home">
+            <h2>Home</h2>
+            <p>This is the home section with some introductory content.</p>
+        </section>
+
+        <section id="aboutme" class="aboutme">
+            <h2>About</h2>
+            <p>This section provides information about us.</p>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2 id="h2">Projects</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="web">Web</button>
+                <button class="filter-btn" data-category="mobile">Mobile</button>
+                <button class="filter-btn" data-category="data">Data</button>
+            </div>
+
+            <div class="projects-container">
+                <div class="project-card" data-category="web">
+                    <img src="./images/webProject.jpg" alt="Web Project" data-large="./images/webProjectLarge.jpg"
+                        class="project-image">
+                    <h3>Project 1</h3>
+                    <p>Details about web project.</p>
+                </div>
+                <div class="project-card" data-category="mobile">
+                    <h3>Project 2</h3>
+                    <p>Details about mobile project.</p>
+                </div>
+                <div class="project-card" data-category="data">
+                    <h3>Project 3</h3>
+                    <p>Details about data project.</p>
+                </div>
+                <div class="project-card" data-category="web">
+                    <h3>Project 4</h3>
+                    <p>Details about web project.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-list">
+            <h2>Skills</h2>
+            <ul>
+                <li><i class="fa-brands fa-html5 skill-icon"></i>HTML</li>
+                <li><i class="fa-brands fa-css3-alt skill-icon"></i>CSS</li>
+                <li><i class="fa-brands fa-js skill-icon"></i>JavaScript</li>
+                <li><i class="fa-brands fa-python skill-icon"></i>Python</li>
+                <li><i class="fa-brands fa-java skill-icon"></i>Java</li>
+                <li><i class="fa-brands fa-react skill-icon"></i>React</li>
+            </ul>
+
+        </section>
+
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send</button>
+                <p id="form-feedback" class="hidden"></p>
+            </form>
+        </section>
+
+
+        <footer>
+            <p>&copy; 2025 Your Company</p>
+        </footer>
+
+        <div id="lightbox-modal" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img" />
+        </div>
+    </main>
+    <script src="script.js"></script>
+
+    
+</body>
+
+
+
+
+</html>
